@@ -1,0 +1,176 @@
+body {
+  background-color: #1B2547;
+  margin: 0;
+  height: 100vh;
+  cursor: url('../img/cursor.png'), auto;
+}
+
+.pointer {
+  cursor: url('../img/pointercursor.png'), auto;
+}
+
+.insect-planet {
+  width: 28vw;
+  position: absolute;
+  transform: translate(66vw,28vw) rotate(25deg);
+  animation: flyingins 4s ease-in-out infinite;
+}
+
+@keyframes flyingins {
+  0% {
+    transform: translate(66vw,29vw) rotate(25deg);
+  }
+
+  50% {
+    transform: translate(66vw,28vw) rotate(25deg);
+  }
+
+  100% {
+    transform: translate(66vw,29vw) rotate(25deg);
+  }
+}
+
+.octopus-planet {
+  width: 15vw;
+  position: absolute;
+  transform: translate(50vw,5vw) rotate(25deg);
+  animation: flyingoct 4s ease-in-out infinite;
+}
+
+@keyframes flyingoct {
+  0% {
+    transform: translate(50vw,5vw) rotate(25deg);
+  }
+
+  50% {
+    transform: translate(50vw,6vw) rotate(25deg);
+  }
+
+  100% {
+    transform: translate(50vw,5vw) rotate(25deg);
+  }
+}
+
+.poison-planet {
+  width: 40vw;
+  position: absolute;
+  transform: translate(-1vw,7vw) rotate(-20deg);
+  animation: flyingpoi 4s ease-in-out infinite;
+}
+
+@keyframes flyingpoi {
+  0% {
+    transform: translate(-1vw,8vw) rotate(-20deg);
+  }
+
+  50% {
+    transform: translate(-1vw,7vw) rotate(-20deg);
+  }
+
+  100% {
+    transform: translate(-1vw,8vw) rotate(-20deg);
+  }
+}
+
+.destroyed-planet {
+  width: 25vw;
+  position: absolute;
+  transform: translate(30vw,45vw) rotate(-25deg);
+  animation: flyingdes 4s ease-in-out infinite;
+}
+
+@keyframes flyingdes {
+  0% {
+    transform: translate(30vw,45vw) rotate(-25deg);
+  }
+
+  50% {
+    transform: translate(30vw,46vw) rotate(-25deg);
+  }
+
+  100% {
+    transform: translate(30vw,45vw) rotate(-25deg);
+  }
+}
+
+
+.target {
+  width: 10vw;
+  position: absolute;
+}
+
+.target.insect {
+  transform: translate(68vw,44vw);
+  animation: targ1 4s ease-in-out infinite;
+}
+
+@keyframes targ1 {
+  0% {
+    transform: translate(68vw,45vw) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(68vw,44vw) rotate(25deg);
+  }
+
+  100% {
+    transform: translate(68vw,45vw) rotate(0deg);
+  }
+}
+
+.target.poison {
+  transform: translate(24vw,24vw);
+  animation: targ2 4s ease-in-out infinite;
+}
+
+@keyframes targ2 {
+  0% {
+    transform: translate(24vw,25vw) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(24vw,24vw) rotate(25deg);
+  }
+
+  100% {
+    transform: translate(24vw,25vw) rotate(0deg);
+  }
+}
+
+.target.octopus {
+  transform: translate(56vw,13vw);
+  animation: targ3 4s ease-in-out infinite;
+}
+
+@keyframes targ3 {
+  0% {
+    transform: translate(56vw,13vw) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(56vw,14vw) rotate(45deg);
+  }
+
+  100% {
+    transform: translate(56vw,13vw) rotate(0deg);
+  }
+}
+
+.target.destroyed {
+  transform: translate(48vw,51vw);
+  animation: targ4 4s ease-in-out infinite;
+}
+
+@keyframes targ4 {
+  0% {
+    transform: translate(48vw,51vw) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(48vw,52vw) rotate(45deg);
+  }
+
+  100% {
+    transform: translate(48vw,51vw) rotate(0deg);
+  }
+}
