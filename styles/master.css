@@ -1,8 +1,38 @@
+@import "reset.css";
+
+html {
+  /* overflow-x: hidden; */
+}
 body {
+  /* overflow-x: hidden; */
   background-color: #1B2547;
-  margin: 0;
-  height: 100vh;
+  width: 1024px;
+  height: 745px;
   cursor: url('../img/cursor.png'), auto;
+}
+
+.framelt {
+  position: fixed;
+  top: 2vw;
+  left: 2vw;
+}
+.framelb {
+  position: fixed;
+  left: 2vw;
+  bottom: 2vw;
+  transform: rotate(-90deg);
+}
+.framert {
+  position: fixed;
+  top: 2vw;
+  right: 2vw;
+  transform: rotate(90deg);
+}
+.framerb {
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  transform: rotate(180deg);
 }
 
 .pointer {
@@ -33,11 +63,28 @@ body {
 .octopus-planet {
   width: 15vw;
   position: absolute;
-  transform: translate(50vw,5vw) rotate(25deg);
+  z-index: 1;
+  /* transform: translate(50vw,5vw) rotate(25deg); */
+  left: 50vw;
+  top: 5vw;
   animation: flyingoct 4s ease-in-out infinite;
 }
 
 @keyframes flyingoct {
+  0% {
+    transform: translateY(5vw) rotate(25deg);
+  }
+
+  50% {
+    transform: translateY(6vw) rotate(25deg);
+  }
+
+  100% {
+    transform: translateY(5vw) rotate(25deg);
+  }
+}
+
+/* @keyframes flyingoct {
   0% {
     transform: translate(50vw,5vw) rotate(25deg);
   }
@@ -49,7 +96,7 @@ body {
   100% {
     transform: translate(50vw,5vw) rotate(25deg);
   }
-}
+} */
 
 .poison-planet {
   width: 40vw;
@@ -95,6 +142,7 @@ body {
 
 
 .target {
+  z-index: 3;
   width: 10vw;
   position: absolute;
 }
@@ -138,21 +186,21 @@ body {
 }
 
 .target.octopus {
-  transform: translate(56vw,13vw);
+  transform: translate(59vw,16vw);
   animation: targ3 4s ease-in-out infinite;
 }
 
 @keyframes targ3 {
   0% {
-    transform: translate(56vw,13vw) rotate(0deg);
+    transform: translate(59vw,16vw) rotate(0deg);
   }
 
   50% {
-    transform: translate(56vw,14vw) rotate(45deg);
+    transform: translate(59vw,17vw) rotate(45deg);
   }
 
   100% {
-    transform: translate(56vw,13vw) rotate(0deg);
+    transform: translate(59vw,16vw) rotate(0deg);
   }
 }
 
@@ -172,5 +220,35 @@ body {
 
   100% {
     transform: translate(48vw,51vw) rotate(0deg);
+  }
+}
+
+#octotargetland {
+  display: none;
+  opacity: 0;
+}
+
+.star {
+  width: 3vw;
+  animation: starblinking 2s infinite;
+}
+
+@keyframes starblinking {
+  0% {
+    width: 3vw;
+    /* transform: rotate(15deg); */
+    opacity: 1;
+  }
+
+  50% {
+    width: 2vw;
+    /* transform: rotate(-15deg); */
+    opacity: 0;
+  }
+
+  100% {
+    width: 3vw;
+    /* transform: rotate(15deg); */
+    opacity: 1;
   }
 }
