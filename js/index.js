@@ -1,17 +1,3 @@
-let numberOfStars = 10
-
-for (let i = 0; i < numberOfStars; i += 1) {
-  let stars = document.querySelector('.star')
-
-  if (anime.random(2,1) % 2 === 0) {
-    let size = `${anime.random(50,350)}px`
-    stars.style.width = size
-    stars.style.height = size
-  } else {
-    stars.style.width = `${anime.random(50,500)}px`
-    stars.style.height = `${anime.random(50,500)}px`
-  }
-
   let tl = anime.timeline({
   autoplay: false
 })
