@@ -247,7 +247,7 @@ body {
 }
 
 .star {
-  width: 3vw;
+  width: 2vw;
   animation: starblinking 2s infinite;
   transform-origin: center;
 }
