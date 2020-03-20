@@ -64,7 +64,6 @@ body {
   width: 15vw;
   position: absolute;
   z-index: 1;
-  /* transform: translate(50vw,5vw) rotate(25deg); */
   left: 50vw;
   top: 5vw;
   animation: flyingoct 4s ease-in-out infinite;
@@ -83,20 +82,6 @@ body {
     transform: translateY(5vw) rotate(25deg);
   }
 }
-
-/* @keyframes flyingoct {
-  0% {
-    transform: translate(50vw,5vw) rotate(25deg);
-  }
-
-  50% {
-    transform: translate(50vw,6vw) rotate(25deg);
-  }
-
-  100% {
-    transform: translate(50vw,5vw) rotate(25deg);
-  }
-} */
 
 .poison-planet {
   width: 40vw;
@@ -225,30 +210,61 @@ body {
 
 #octotargetland {
   display: none;
-  opacity: 0;
+  width: -10vw;
+  animation: targ5 4s ease-in-out infinite;
+}
+@keyframes targ5 {
+  0% {
+    transform: translate(55vw,18vw) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(55vw,19vw) rotate(45deg);
+  }
+
+  100% {
+    transform: translate(55vw,18vw) rotate(0deg);
+  }
+}
+
+#octotargetchar {
+  display: none;
+  width: -10vw;
+  animation: targ6 4s ease-in-out infinite;
+}
+@keyframes targ6 {
+  0% {
+    transform: translate(30vw,46vw) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(30vw,47vw) rotate(45deg);
+  }
+
+  100% {
+    transform: translate(30vw,46vw) rotate(0deg);
+  }
 }
 
 .star {
   width: 3vw;
   animation: starblinking 2s infinite;
+  transform-origin: center;
 }
 
 @keyframes starblinking {
   0% {
-    width: 3vw;
-    /* transform: rotate(15deg); */
+    transform: scale(1.5);
     opacity: 1;
   }
 
   50% {
-    width: 2vw;
-    /* transform: rotate(-15deg); */
+    transform: scale(1);
     opacity: 0;
   }
 
   100% {
-    width: 3vw;
-    /* transform: rotate(15deg); */
+    transform: scale(1.5);
     opacity: 1;
   }
 }

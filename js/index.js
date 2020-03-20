@@ -1,4 +1,16 @@
-let tl = anime.timeline({
+let numberOfStars = 10
+
+for (let i = 0; i < numberOfStars; i += 1) {
+  let stars = document.querySelector('star')
+
+  if (anime.random(0,1) % 2 === 0) {
+    let size = `${anime.random(3,4)}px`
+    stars.style.width = size
+  } else {
+    stars.style.width = `${anime.random(4,3)}px`
+  }
+
+  let tl = anime.timeline({
   autoplay: false
 })
 
@@ -6,7 +18,7 @@ tl
 .add({
   targets: '#octotarget',
   width: '-10vw',
-  duration: 1000,
+  duration: 800,
   easing: 'easeInOutBack' ,
   display: 'none',
 })
@@ -14,21 +26,21 @@ tl
   targets: '#insecttarget',
     width: '-10vw',
     easing: 'easeInOutBack',
-    duration: 1000,
+    duration: 800,
     display: 'none',
 }, 1000)
 .add({
   targets: '#poisontarget',
     width: '-10vw',
     easing: 'easeInOutBack',
-    duration: 1000,
+    duration: 800,
     display: 'none',
 }, 1000)
 .add({
   targets: '#destoyedtarget',
     width: '-10vw',
     easing: 'easeInOutBack',
-    duration: 1000,
+    duration: 800,
     display: 'none',
 }, 1000)
 
@@ -36,19 +48,19 @@ tl
   targets: '.insect-planet',
     width: '22vw',
     easing: 'easeInOutBack',
-    duration: 1000,
+    duration: 700,
 }, 1500)
 .add({
   targets: '.poison-planet',
     width: '22vw',
     easing: 'easeInOutBack',
-    duration: 1000,
+    duration: 700,
 }, 1500)
 .add({
   targets: '.destroyed-planet',
     width: '22vw',
     easing: 'easeInOutBack',
-    duration: 1000,
+    duration: 700,
 }, 1500)
 
 .add({
@@ -57,167 +69,32 @@ tl
     left: '30vw',
     top: '14vw',
     easing: 'easeOutSine',
-    duration: 1000,
+    duration: 700,
     zindex: 2,
 })
 
 .add({
-  targets: '#octotargetland',
+    targets: '#octotargetland',
     easing: 'easeOutSine',
     duration: 1000,
     zindex: 3,
-    opacity: 1,
-    display: 'inline',
-})
+    width: '13vw',
+    begin: function () {
+      document.querySelector('#octotargetland').style.display = 'block'
+    },
+  }, 2100)
+.add({
+    targets: '#octotargetchar',
+    easing: 'easeOutSine',
+    duration: 1000,
+    zindex: 3,
+    width: '13vw',
+    begin: function () {
+      document.querySelector('#octotargetchar').style.display = 'block'
+    },
+  }, 2100)
 
 let targetsoctoPlay =
 document.querySelector('#octotarget')
 
 targetsoctoPlay.onclick = tl.play
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   targets: '.octopus',
-//   width: '-10vw',
-//   autoplay: false,
-//   easing: 'easeInOutBack',
-//   duration: 2000,
-// })
-
-// let viewplanet1 = anime({
-//   targets: '.octopus',
-//   width: '-10vw',
-//   autoplay: false,
-//   easing: 'easeInOutBack',
-//   duration: 2000,
-// })
-// let viewplanet2 = anime({
-//   targets: '.octopus-planet',
-//   width: '70vw',
-//   transform: translate(-50%, -50%),
-//   autoplay: false,
-//   easing: 'easeOutSine',
-//   duration: 4000,
-// })
-// let viewplanet3 = anime({
-//   targets: '.poison-planet .insect-planet .destroyed-planet',
-//   width: '30vw',
-//   autoplay: false,
-//   easing: 'easeOutSine',
-//   duration: 4000,
-// })
-// let viewplanet4 = anime({
-//   targets: '.target .alien .octopus',
-//   display: 'block',
-//   width: ['-10vw', '10vw'],
-//   autoplay: false,
-//   easing: 'easeOutSine',
-//   duration: 4000,
-// })
-
-
-
-
-// let viewplanet1 = anime.timeline({
-//   targets: '#octotarget',
-//   // width: ['10vw', '-10vw'],
-//   scale: -1,
-//   autoplay: false,
-//   easing: 'easeInOutBack',
-//   duration: 2000,
-// }, 0)
-// viewplanet1.add({
-//   targets: '.octopus-planet',
-//   width: '70vw',
-//   autoplay: false,
-//   easing: 'easeOutSine',
-//   duration: 4000,
-// }, 0)
-// viewplanet1.add({
-//   targets: '.poison-planet .insect-planet .destroyed-planet',
-//   width: '30vw',
-//   autoplay: false,
-//   easing: 'easeOutSine',
-//   duration: 4000,
-// }, 3000)
-// viewplanet1.add({
-//   targets: '.target .alien .octopus',
-//   display: 'block',
-//   width: ['-10vw', '10vw'],
-//   autoplay: false,
-//   easing: 'easeOutSine',
-//   duration: 4000,
-// }, 8000)
-
-// let planetbutton = document.querySelector('.octopus')
-//
-// planetbutton.onclick = viewplanet1.play
-
-
-
-// let targetsPlay =
-// document.querySelector('.octopus')
-//
-// targetsPlay.onclick = targets.play
-//
-//
-// let targets2 = anime({
-//   targets: '.insect',
-//   width: '-10vw',
-//   autoplay: false,
-//   easing: 'easeInOutBack',
-//   duration: 2000,
-// })
-//
-// let targetsPlay2 =
-// document.querySelector('.insect')
-//
-// targetsPlay2.onclick = targets2.play
-//
-// let targets3 = anime({
-//   targets: '.poison',
-//   width: '-10vw',
-//   autoplay: false,
-//   easing: 'easeInOutBack',
-//   duration: 2000,
-// })
-//
-// let targetsPlay3 =
-// document.querySelector('.poison')
-//
-// targetsPlay3.onclick = targets3.play
-//
-//
-// let targets4 = anime({
-//   targets: '.destroyed',
-//   width: '-10vw',
-//   autoplay: false,
-//   easing: 'easeInOutBack',
-//   duration: 2000,
-// })
-//
-// let targetsPlay4 =
-// document.querySelector('.destroyed')
-//
-// targetsPlay4.onclick = targets4.play
