@@ -1,4 +1,22 @@
 @import "reset.css";
+@font-face {
+  font-family: 'OCRF-RegularC';
+
+src: url('../fonts/OCRF-RegularC.otf');
+
+font-weight: 400;
+
+font-style: normal;
+}
+@font-face {
+  font-family: 'OCRF-LightC';
+
+src: url('../fonts/OCRF-LightC.otf');
+
+font-weight: 200;
+
+font-style: normal;
+}
 
 html {
   /* overflow-x: hidden; */
@@ -10,6 +28,68 @@ body {
   height: 745px;
   cursor: url('../img/cursor.png'), auto;
 }
+
+/* ТЕКСТ */
+
+h1 {
+  font-size: 48px;
+  font-family: 'OCRF-RegularC';
+  font-weight: 400;
+  color: #27FFF2;
+}
+
+p {
+  font-size: 11;
+  font-family: 'OCRF-LightC';
+  font-weight: 200;
+  color: #27FFF2;
+}
+
+.planet-text-name {
+  position: absolute;
+  top: 62vw;
+  left: 6vw;
+  width: 40vw;
+  display: none;
+}
+
+.planet-name {
+  margin-top: 2vw;
+  display: none;
+}
+
+.planet-decr {
+  display: none;
+}
+
+
+
+.planet-text {
+  position: absolute;
+  top: 33vw;
+  left: 6vw;
+  width: 20vw;
+}
+
+.planet-land-name {
+  font-size: 24px;
+  font-family: 'OCRF-RegularC';
+  margin-bottom: 2vw;
+  display: none;
+}
+
+.planet-land-decr {
+  font-family: 'OCRF-LightC';
+  margin-bottom: 1vw;
+  display: none;
+}
+
+.planet-land-decr2 {
+  font-family: 'OCRF-LightC';
+  display: none;
+}
+
+/* РАМКИ */
 
 .framelt {
   position: fixed;
@@ -35,9 +115,13 @@ body {
   transform: rotate(180deg);
 }
 
+/* КУРСОР */
+
 .pointer {
   cursor: url('../img/pointercursor.png'), auto;
 }
+
+/* ПЛАНЕТЫ */
 
 .insect-planet {
   width: 28vw;
@@ -125,6 +209,7 @@ body {
   }
 }
 
+/* ТАРГЕТЫ */
 
 .target {
   z-index: 3;
@@ -132,7 +217,7 @@ body {
   position: absolute;
 }
 
-.target.insect {
+#insecttarget {
   transform: translate(68vw,44vw);
   animation: targ1 4s ease-in-out infinite;
 }
@@ -151,7 +236,7 @@ body {
   }
 }
 
-.target.poison {
+#poisontarget {
   transform: translate(24vw,24vw);
   animation: targ2 4s ease-in-out infinite;
 }
@@ -170,7 +255,8 @@ body {
   }
 }
 
-.target.octopus {
+#octotarget {
+  width: 10vw;
   transform: translate(59vw,16vw);
   animation: targ3 4s ease-in-out infinite;
 }
@@ -189,7 +275,7 @@ body {
   }
 }
 
-.target.destroyed {
+#destoyedtarget {
   transform: translate(48vw,51vw);
   animation: targ4 4s ease-in-out infinite;
 }
@@ -208,51 +294,87 @@ body {
   }
 }
 
-#octotargetland {
-  display: none;
-  width: -10vw;
-  animation: targ5 4s ease-in-out infinite;
-}
-@keyframes targ5 {
-  0% {
-    transform: translate(55vw,18vw) rotate(0deg);
-  }
-
-  50% {
-    transform: translate(55vw,19vw) rotate(45deg);
-  }
-
-  100% {
-    transform: translate(55vw,18vw) rotate(0deg);
-  }
-}
 
 #octotargetchar {
-  display: none;
-  width: -10vw;
+  width: 10vw;
   animation: targ6 4s ease-in-out infinite;
+  display: none;
 }
 @keyframes targ6 {
   0% {
-    transform: translate(30vw,46vw) rotate(0deg);
+    transform: translate(30vw,36vw) rotate(0deg);
   }
 
   50% {
-    transform: translate(30vw,47vw) rotate(45deg);
+    transform: translate(30vw,37vw) rotate(45deg);
   }
 
   100% {
-    transform: translate(30vw,46vw) rotate(0deg);
+    transform: translate(30vw,36vw) rotate(0deg);
+  }
+}
+
+/* ОБЪЕКТЫ НА ПЛАНЕТАХ */
+
+.octocirclechar {
+  z-index: 5;
+  position: absolute;
+  width: -10vw;
+  display: none;
+  animation: octocirclechar1 4s ease-in-out infinite;
+}
+@keyframes octocirclechar1 {
+  0% {
+    transform: translate(32vw,40vw);
+  }
+
+  50% {
+    transform: translate(32vw,40vw);
+  }
+
+  100% {
+    transform: translate(32vw,40vw);
   }
 }
 
 .star {
-  width: 2vw;
+  width: 1vw;
   animation: starblinking 2s infinite;
   transform-origin: center;
 }
 
-@keyframes starblinking {
+#octoAlienStripe {
+  position: absolute;
+  z-index: 5;
+  animation: octopuslinechar1 4s ease-in-out infinite;
+  display: none;
+}
+@keyframes octopuslinechar1 {
+  0% {
+    transform: translate(5vw,34vw);
+  }
+
+  50% {
+    transform: translate(5vw,34vw);
+  }
+
+  100% {
+    transform: translate(5vw,34vw);
+  }
+}
+
+.octopuslinechar {
+}
+
+.octopuslandimg {
+  /* display: none; */
+  position: absolute;
+  width: 18vw;
+  top: 12vw;
+  left: 5vw;
+}
+
+/* @keyframes starblinking {
   0% {
     transform: scale(1.5);
     opacity: 1;
@@ -267,4 +389,4 @@ body {
     transform: scale(1.5);
     opacity: 1;
   }
-}
+} */
