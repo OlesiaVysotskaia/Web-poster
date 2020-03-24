@@ -29,6 +29,13 @@ body {
   cursor: url('../img/cursor.png'), auto;
 }
 
+.back-to-map {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
 /* ТЕКСТ */
 
 h1 {
@@ -126,7 +133,8 @@ p {
 .insect-planet {
   width: 28vw;
   position: absolute;
-  transform: translate(66vw,28vw) rotate(25deg);
+  /* left: 66vw;
+  top: 29vw; */
   animation: flyingins 4s ease-in-out infinite;
 }
 
@@ -170,7 +178,8 @@ p {
 .poison-planet {
   width: 40vw;
   position: absolute;
-  transform: translate(-1vw,7vw) rotate(-20deg);
+  /* left: -1vw;
+  top: 8vw; */
   animation: flyingpoi 4s ease-in-out infinite;
 }
 
@@ -191,7 +200,8 @@ p {
 .destroyed-planet {
   width: 25vw;
   position: absolute;
-  transform: translate(30vw,45vw) rotate(-25deg);
+  /* left: 30vw;
+  top: 45vw; */
   animation: flyingdes 4s ease-in-out infinite;
 }
 
@@ -367,7 +377,7 @@ p {
 }
 
 .octopuslandimg {
-  /* display: none; */
+  display: none;
   position: absolute;
   width: 18vw;
   top: 12vw;
