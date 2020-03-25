@@ -226,98 +226,100 @@ tlOctoLand
 let targetsOctoLAndPlay =
 document.querySelector('#octotargetland')
 
+targetsOctoLAndPlay.onclick = tlOctoLand.play
+
 
 // ПОСМОТРЕТЬ ПЕРСОНАЖА
 
 
-targetsOctoCharPlay.onclick = tlOctoChar.play
-let tlOctoChar = anime.timeline({
-autoplay: false
-})
-
-tlOctoChar
-.add({
-  targets: '#octotargetland',
-  width: ['13vw','-10vw'],
-  duration: 800,
-  easing: 'easeInOutBack' ,
-})
-.add({
-  targets: '#octotargetland',
-  begin: function () {
-    document.querySelector('#octotargetland').style.display = 'none'}
-})
-.add({
-  targets: '.octocircleland',
-  easing: 'easeOutSine',
-  duration: 600,
-  width: '3vw',
-  zindex: 5,
-  begin: function () {
-    document.querySelector('.octocircleland').style.display = 'block'
-  },
-}, 1200)
-.add({
-  targets: '#octo-stripe-land',
-  begin: function () {
-    document.querySelector('#octo-stripe-land').style.display = 'block'},
-}, 1200)
-.add({
-  targets: '.octopuslineland',
-  zindex: 5,
-  strokeDashoffset: [anime.setDashoffset, 745],
-  easing: 'easeOutSine',
-  duration: 600,
-  delay: function(el, i) { return i * 0 },
-}, 1200)
-
-
-.add({
-  targets: '.planet-text',
-  easing: 'easeOutSine',
-  top: '36vw',
-  begin: function () {
-    document.querySelector('.planet-text').style.display = 'block'}
-}, 1800)
-.add({
-  targets: '.planet-land-name',
-  easing: 'easeOutSine',
-  opacity: ['0%','100%'],
-  duration: 700,
-  begin: function () {
-    document.querySelector('.planet-land-name').style.display = 'block'}
-}, 1800)
-.add({
-  targets: '.planet-land-decr',
-  easing: 'easeOutSine',
-  opacity: ['0%','100%'],
-  duration: 700,
-  begin: function () {
-    document.querySelector('.planet-land-decr').style.display = 'block'}
-}, 1800)
-.add({
-  targets: '.planet-land-decr2',
-  easing: 'easeOutSine',
-  opacity: ['0%','100%'],
-  duration: 700,
-  begin: function () {
-    document.querySelector('.planet-land-decr2').style.display = 'block'}
-}, 1800)
-.add({
-  targets: '.octopuslandimg',
-  easing: 'easeOutSine',
-  opacity: ['0%','100%'],
-  top: '15vw',
-  duration: 700,
-  begin: function () {
-    document.querySelector('.octopuslandimg').style.display = 'block'}
-}, 1800)
-
-
-let targetsOctoCharPlay =
-document.querySelector('#octotargetland')
-
-targetsOctoCharPlay.onclick = tlOctoChar.play
+// targetsOctoCharPlay.onclick = tlOctoChar.play
+// let tlOctoChar = anime.timeline({
+// autoplay: false
+// })
+//
+// tlOctoChar
+// .add({
+//   targets: '#octotargetland',
+//   width: ['13vw','-10vw'],
+//   duration: 800,
+//   easing: 'easeInOutBack' ,
+// })
+// .add({
+//   targets: '#octotargetland',
+//   begin: function () {
+//     document.querySelector('#octotargetland').style.display = 'none'}
+// })
+// .add({
+//   targets: '.octocircleland',
+//   easing: 'easeOutSine',
+//   duration: 600,
+//   width: '3vw',
+//   zindex: 5,
+//   begin: function () {
+//     document.querySelector('.octocircleland').style.display = 'block'
+//   },
+// }, 1200)
+// .add({
+//   targets: '#octo-stripe-land',
+//   begin: function () {
+//     document.querySelector('#octo-stripe-land').style.display = 'block'},
+// }, 1200)
+// .add({
+//   targets: '.octopuslineland',
+//   zindex: 5,
+//   strokeDashoffset: [anime.setDashoffset, 745],
+//   easing: 'easeOutSine',
+//   duration: 600,
+//   delay: function(el, i) { return i * 0 },
+// }, 1200)
+//
+//
+// .add({
+//   targets: '.planet-text',
+//   easing: 'easeOutSine',
+//   top: '36vw',
+//   begin: function () {
+//     document.querySelector('.planet-text').style.display = 'block'}
+// }, 1800)
+// .add({
+//   targets: '.planet-land-name',
+//   easing: 'easeOutSine',
+//   opacity: ['0%','100%'],
+//   duration: 700,
+//   begin: function () {
+//     document.querySelector('.planet-land-name').style.display = 'block'}
+// }, 1800)
+// .add({
+//   targets: '.planet-land-decr',
+//   easing: 'easeOutSine',
+//   opacity: ['0%','100%'],
+//   duration: 700,
+//   begin: function () {
+//     document.querySelector('.planet-land-decr').style.display = 'block'}
+// }, 1800)
+// .add({
+//   targets: '.planet-land-decr2',
+//   easing: 'easeOutSine',
+//   opacity: ['0%','100%'],
+//   duration: 700,
+//   begin: function () {
+//     document.querySelector('.planet-land-decr2').style.display = 'block'}
+// }, 1800)
+// .add({
+//   targets: '.octopuslandimg',
+//   easing: 'easeOutSine',
+//   opacity: ['0%','100%'],
+//   top: '15vw',
+//   duration: 700,
+//   begin: function () {
+//     document.querySelector('.octopuslandimg').style.display = 'block'}
+// }, 1800)
+//
+//
+// let targetsOctoCharPlay =
+// document.querySelector('#octotargetland')
+//
+// targetsOctoCharPlay.onclick = tlOctoChar.play
 
 // ВЕРНУТЬСЯ В КОСМОС
 
