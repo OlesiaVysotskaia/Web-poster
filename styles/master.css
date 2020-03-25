@@ -305,7 +305,7 @@ p {
 }
 
 
-#octotargetchar {
+#octotargetland {
   width: 10vw;
   animation: targ6 4s ease-in-out infinite;
   display: none;
@@ -326,14 +326,22 @@ p {
 
 /* ОБЪЕКТЫ НА ПЛАНЕТАХ */
 
+.octocircleland {
+  z-index: 5;
+  position: absolute;
+  width: -10vw;
+  display: none;
+  transform: translate(32vw,40vw)
+  /* animation: octocircleland1 4s ease-in-out infinite; */
+}
 .octocirclechar {
   z-index: 5;
   position: absolute;
   width: -10vw;
   display: none;
-  animation: octocirclechar1 4s ease-in-out infinite;
+  transform: translate(60vw,27vw)
 }
-@keyframes octocirclechar1 {
+/* @keyframes octocircleland1 {
   0% {
     transform: translate(32vw,40vw);
   }
@@ -345,7 +353,7 @@ p {
   100% {
     transform: translate(32vw,40vw);
   }
-}
+} */
 
 .star {
   width: 1vw;
@@ -353,13 +361,21 @@ p {
   transform-origin: center;
 }
 
-#octoAlienStripe {
+#octo-stripe-land {
   position: absolute;
   z-index: 5;
-  animation: octopuslinechar1 4s ease-in-out infinite;
+  /* animation: octopuslineland1 4s ease-in-out infinite; */
   display: none;
+  transform: translate(5vw,34vw)
 }
-@keyframes octopuslinechar1 {
+#octo-stripe-char {
+  position: absolute;
+  z-index: 5;
+  /* animation: octopuslineland1 4s ease-in-out infinite; */
+  display: none;
+  transform: translate(61vw,28vw)
+}
+/* @keyframes octopuslineland1 {
   0% {
     transform: translate(5vw,34vw);
   }
@@ -371,9 +387,9 @@ p {
   100% {
     transform: translate(5vw,34vw);
   }
-}
+} */
 
-.octopuslinechar {
+.octopuslineland {
 }
 
 .octopuslandimg {

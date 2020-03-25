@@ -1,5 +1,5 @@
 // let octopusAlienStripeRise = anime({
-//   targets: '#octoAlienStripe',
+//   targets: '#octo-stripe-land',
 //   targets: '.line-drawing-demo .lines path',
 //   strokeDashoffset: [anime.setDashoffset, 0],
 //   easing: 'easeInOutSine',
@@ -19,6 +19,8 @@ tlOcto
 .add({
   targets: '#octotarget',
   width: '-10vw',
+  // scale: [2,1],
+  // transformorigin: 'center',
   duration: 800,
   easing: 'easeInOutBack' ,
 })
@@ -37,7 +39,7 @@ tlOcto
   targets: '#insecttarget',
   begin: function () {
     document.querySelector('#insecttarget').style.display = 'none'}
-}, 800)
+}, 1600)
 .add({
   targets: '#poisontarget',
   width: '-10vw',
@@ -49,7 +51,7 @@ tlOcto
   targets: '#poisontarget',
   begin: function () {
     document.querySelector('#poisontarget').style.display = 'none'}
-}, 800)
+}, 1600)
 .add({
   targets: '#destoyedtarget',
   width: '-10vw',
@@ -61,7 +63,7 @@ tlOcto
   targets: '#destoyedtarget',
   begin: function () {
     document.querySelector('#destoyedtarget').style.display = 'none'}
-}, 800)
+}, 1600)
 
 .add({
   targets: '.insect-planet',
@@ -118,13 +120,13 @@ tlOcto
 
 
 .add({
-  targets: '#octotargetchar',
+  targets: '#octotargetland',
   easing: 'easeOutSine',
   duration: 1000,
   zindex: 3,
   width: ['-10vw','13vw'],
   begin: function () {
-    document.querySelector('#octotargetchar').style.display = 'block'
+    document.querySelector('#octotargetland').style.display = 'block'
   },
   }, 3000)
 
@@ -138,39 +140,130 @@ targetsoctoPlay.onclick = tlOcto.play
 
 
 
+let tlOctoLand = anime.timeline({
+autoplay: false
+})
+
+tlOctoLand
+.add({
+  targets: '#octotargetland',
+  width: ['13vw','-10vw'],
+  duration: 800,
+  easing: 'easeInOutBack' ,
+})
+.add({
+  targets: '#octotargetland',
+  begin: function () {
+    document.querySelector('#octotargetland').style.display = 'none'}
+})
+.add({
+  targets: '.octocircleland',
+  easing: 'easeOutSine',
+  duration: 600,
+  width: '3vw',
+  zindex: 5,
+  begin: function () {
+    document.querySelector('.octocircleland').style.display = 'block'
+  },
+}, 1200)
+.add({
+  targets: '#octo-stripe-land',
+  begin: function () {
+    document.querySelector('#octo-stripe-land').style.display = 'block'},
+}, 1200)
+.add({
+  targets: '.octopuslineland',
+  zindex: 5,
+  strokeDashoffset: [anime.setDashoffset, 745],
+  easing: 'easeOutSine',
+  duration: 600,
+  delay: function(el, i) { return i * 0 },
+}, 1200)
+
+
+.add({
+  targets: '.planet-text',
+  easing: 'easeOutSine',
+  top: '36vw',
+  begin: function () {
+    document.querySelector('.planet-text').style.display = 'block'}
+}, 1800)
+.add({
+  targets: '.planet-land-name',
+  easing: 'easeOutSine',
+  opacity: ['0%','100%'],
+  duration: 700,
+  begin: function () {
+    document.querySelector('.planet-land-name').style.display = 'block'}
+}, 1800)
+.add({
+  targets: '.planet-land-decr',
+  easing: 'easeOutSine',
+  opacity: ['0%','100%'],
+  duration: 700,
+  begin: function () {
+    document.querySelector('.planet-land-decr').style.display = 'block'}
+}, 1800)
+.add({
+  targets: '.planet-land-decr2',
+  easing: 'easeOutSine',
+  opacity: ['0%','100%'],
+  duration: 700,
+  begin: function () {
+    document.querySelector('.planet-land-decr2').style.display = 'block'}
+}, 1800)
+.add({
+  targets: '.octopuslandimg',
+  easing: 'easeOutSine',
+  opacity: ['0%','100%'],
+  top: '15vw',
+  duration: 700,
+  begin: function () {
+    document.querySelector('.octopuslandimg').style.display = 'block'}
+}, 1800)
+
+
+let targetsOctoLAndPlay =
+document.querySelector('#octotargetland')
+
+
+// ПОСМОТРЕТЬ ПЕРСОНАЖА
+
+
+targetsOctoCharPlay.onclick = tlOctoChar.play
 let tlOctoChar = anime.timeline({
 autoplay: false
 })
 
 tlOctoChar
 .add({
-  targets: '#octotargetchar',
+  targets: '#octotargetland',
   width: ['13vw','-10vw'],
   duration: 800,
   easing: 'easeInOutBack' ,
 })
 .add({
-  targets: '#octotargetchar',
+  targets: '#octotargetland',
   begin: function () {
-    document.querySelector('#octotargetchar').style.display = 'none'}
+    document.querySelector('#octotargetland').style.display = 'none'}
 })
 .add({
-  targets: '.octocirclechar',
+  targets: '.octocircleland',
   easing: 'easeOutSine',
   duration: 600,
   width: '3vw',
   zindex: 5,
   begin: function () {
-    document.querySelector('.octocirclechar').style.display = 'block'
+    document.querySelector('.octocircleland').style.display = 'block'
   },
-})
-.add({
-  targets: '#octoAlienStripe',
-  begin: function () {
-    document.querySelector('#octoAlienStripe').style.display = 'block'},
 }, 1200)
 .add({
-  targets: '.octopuslinechar',
+  targets: '#octo-stripe-land',
+  begin: function () {
+    document.querySelector('#octo-stripe-land').style.display = 'block'},
+}, 1200)
+.add({
+  targets: '.octopuslineland',
   zindex: 5,
   strokeDashoffset: [anime.setDashoffset, 745],
   easing: 'easeOutSine',
@@ -222,7 +315,7 @@ tlOctoChar
 
 
 let targetsOctoCharPlay =
-document.querySelector('#octotargetchar')
+document.querySelector('#octotargetland')
 
 targetsOctoCharPlay.onclick = tlOctoChar.play
 
@@ -238,85 +331,86 @@ backToSpaceFromOcto
   easing: 'easeOutSine',
   opacity: ['100%','0%'],
   top: ['36vw','33vw'],
-}, 1)
+  duration: 700,
+}, 0)
 .add({
   targets: '.planet-text',
   begin: function () {
     document.querySelector('.planet-text').style.display = 'none'}
-}, 1)
+}, 700)
 .add({
   targets: '.planet-land-name',
   easing: 'easeOutSine',
   opacity: ['100%','0%'],
   duration: 700,
-}, 1)
+}, 0)
 .add({
   targets: '.planet-land-name',
   begin: function () {
     document.querySelector('.planet-land-name').style.display = 'none'}
-}, 1)
+}, 700)
 .add({
   targets: '.planet-land-decr',
   easing: 'easeOutSine',
   opacity: ['100%','0%'],
   duration: 700,
-}, 1)
+}, 0)
 .add({
   targets: '.planet-land-decr',
   begin: function () {
     document.querySelector('.planet-land-decr').style.display = 'none'}
-}, 1)
+}, 700)
 .add({
   targets: '.planet-land-decr2',
   easing: 'easeOutSine',
   opacity: ['100%','0%'],
   duration: 700,
-}, 1)
+}, 0)
 .add({
   targets: '.planet-land-decr2',
   begin: function () {
     document.querySelector('.planet-land-decr2').style.display = 'none'}
-}, 1)
+}, 700)
 .add({
   targets: '.octopuslandimg',
   easing: 'easeOutSine',
   opacity: ['100%','0%'],
   top: ['15vw','12vw'],
   duration: 700,
-}, 1)
+}, 0)
 .add({
   targets: '.octopuslandimg',
   begin: function () {
     document.querySelector('.octopuslandimg').style.display = 'none'}
-}, 1)
+}, 700)
 
 
 .add({
-  targets: '.octocirclechar',
+  targets: '.octocircleland',
   easing: 'easeOutSine',
   duration: 600,
   width: ['3vw','-10vw'],
   zindex: 5,
-})
+}, 700)
 .add({
-  targets: '.octocirclechar',
+  targets: '.octocircleland',
   begin: function () {
-    document.querySelector('.octocirclechar').style.display = 'none'
+    document.querySelector('.octocircleland').style.display = 'none'
   },
 })
 .add({
-  targets: '.octopuslinechar',
+  targets: '.octopuslineland',
   zindex: 5,
-  strokeDashoffset: [anime.setDashoffset, 1000],
+  strokeDashoffset: [anime.setDashoffset, -50],
   easing: 'easeOutSine',
   duration: 600,
   delay: function(el, i) { return i * 0 },
-}, 400)
+}, 700)
 .add({
-  targets: '#octoAlienStripe',
+  targets: '#octo-stripe-land',
   begin: function () {
-    document.querySelector('#octoAlienStripe').style.display = 'none'},
-}, 400)
+    document.querySelector('#octo-stripe-land').style.display = 'none'},
+})
 
 
 
@@ -324,34 +418,34 @@ backToSpaceFromOcto
   targets: '.planet-text-name',
   easing: 'easeOutSine',
   top:['65vw','62vw'],
-}, 1000)
+}, 1300)
 .add({
   targets: '.planet-text-name',
   begin: function () {
     document.querySelector('.planet-text-name').style.display = 'none'}
-}, 1000)
+})
 .add({
   targets: '.planet-name',
   easing: 'easeOutSine',
   opacity: ['100%','0%'],
   duration: 700,
-}, 1000)
+}, 1300)
 .add({
   targets: '.planet-name',
   begin: function () {
     document.querySelector('.planet-name').style.display = 'none'}
-}, 1000)
+})
 .add({
   targets: '.planet-decr',
   easing: 'easeOutSine',
   opacity: ['100%','0%'],
   duration: 700,
-}, 1000)
+}, 1300)
 .add({
   targets: '.planet-decr',
   begin: function () {
     document.querySelector('.planet-decr').style.display = 'none'}
-}, 1000)
+})
 .add({
   targets: '.octopus-planet',
   // width: ['40vw','15vw'],
@@ -361,7 +455,7 @@ backToSpaceFromOcto
   easing: 'easeOutSine',
   duration: 700,
   zindex: 2,
-})
+}, 2000)
 
 
 .add({
@@ -370,21 +464,21 @@ backToSpaceFromOcto
   width: '28vw',
   easing: 'easeOutSine',
   duration: 700,
-}, 1700)
+}, 2700)
 .add({
   targets: '.poison-planet',
   // width: ['22vw','40vw'],
   width: '40vw',
   easing: 'easeOutSine',
   duration: 700,
-}, 1700)
+}, 2700)
 .add({
   targets: '.destroyed-planet',
   // width: ['22vw','25vw'],
   width: '25vw',
   easing: 'easeOutSine',
   duration: 700,
-}, 1700)
+}, 2700)
 
 .add({
   targets: '#octotarget',
@@ -393,7 +487,7 @@ backToSpaceFromOcto
   easing: 'easeInOutBack',
   begin: function () {
     document.querySelector('#octotarget').style.display = 'block'}
-}, 2400)
+}, 3400)
 .add({
   targets: '#insecttarget',
   width: ['-10vw','10vw'],
@@ -401,7 +495,7 @@ backToSpaceFromOcto
   easing: 'easeInOutBack',
   begin: function () {
     document.querySelector('#insecttarget').style.display = 'block'}
-}, 2400)
+}, 3400)
 .add({
   targets: '#poisontarget',
   width: ['-10vw','10vw'],
@@ -410,7 +504,7 @@ backToSpaceFromOcto
   transformorigin: 'center',
   begin: function () {
     document.querySelector('#poisontarget').style.display = 'block'}
-}, 2400)
+}, 3400)
 .add({
   targets: '#destoyedtarget',
   width: ['-10vw','10vw'],
@@ -419,7 +513,7 @@ backToSpaceFromOcto
   transformorigin: 'center',
   begin: function () {
     document.querySelector('#destoyedtarget').style.display = 'block'}
-}, 2400)
+}, 3400)
 
 
 
