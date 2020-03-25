@@ -306,7 +306,7 @@ p {
 
 
 #octotargetland {
-  width: 10vw;
+  width: 0vw;
   animation: targ6 4s ease-in-out infinite;
   display: none;
 }

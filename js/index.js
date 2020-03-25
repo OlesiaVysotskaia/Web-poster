@@ -469,6 +469,7 @@ backToSpaceFromOcto
 }, 2700)
 .add({
   targets: '.poison-planet',
+  translate: '300ms' 'ease',
   // width: ['22vw','40vw'],
   width: '40vw',
   easing: 'easeOutSine',
