@@ -19,8 +19,6 @@ tlOcto
 .add({
   targets: '#octotarget',
   width: '-10vw',
-  // scale: [2,1],
-  // transformorigin: 'center',
   duration: 800,
   easing: 'easeInOutBack' ,
 })
@@ -231,7 +229,7 @@ tlOctoLand
   targets: '.octopuslandimg',
   easing: 'easeOutSine',
   opacity: ['0%','100%'],
-  top: '26vw',
+  top: '15vw',
   duration: 700,
   begin: function () {
     document.querySelector('.octopuslandimg').style.display = 'block'}
@@ -397,7 +395,7 @@ backToSpaceFromOcto
   targets: '.octopuslandimg',
   easing: 'easeOutSine',
   opacity: ['100%','0%'],
-  top: ['26vw','23vw'],
+  top: ['15vw','12vw'],
   duration: 700,
 }, 0)
 .add({

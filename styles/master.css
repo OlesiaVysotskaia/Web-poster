@@ -406,8 +406,9 @@ p {
   display: none;
   position: absolute;
   width: 18vw;
-  top: 23vw;
+  top: 12vw;
   left: 5vw;
+  z-index: 5;
 }
 .octopuscharimg {
   display: none;
