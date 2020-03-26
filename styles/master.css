@@ -54,7 +54,9 @@ p {
 
 .planet-text-name {
   position: absolute;
-  top: 62vw;
+  /* top: 62vw; */
+  bottom: 2vw;
+  z-index: 5;
   left: 6vw;
   width: 40vw;
   display: none;
@@ -71,7 +73,7 @@ p {
 
 
 
-.planet-text {
+.planet-text-land {
   position: absolute;
   top: 33vw;
   left: 6vw;
@@ -92,6 +94,26 @@ p {
 }
 
 .planet-land-decr2 {
+  font-family: 'OCRF-LightC';
+  display: none;
+}
+
+.planet-text-char {
+  position: absolute;
+  top: 47vw;
+  left: 71vw;
+  width: 20vw;
+  z-index: 5;
+}
+
+.planet-char-name {
+  font-size: 24px;
+  font-family: 'OCRF-RegularC';
+  margin-bottom: 2vw;
+  display: none;
+}
+
+.planet-char-decr {
   font-family: 'OCRF-LightC';
   display: none;
 }
@@ -131,6 +153,7 @@ p {
 /* ПЛАНЕТЫ */
 
 .insect-planet {
+  transition: 600ms ease;
   width: 28vw;
   position: absolute;
   /* left: 66vw;
@@ -153,6 +176,7 @@ p {
 }
 
 .octopus-planet {
+  transition: 600ms ease;
   width: 15vw;
   position: absolute;
   z-index: 1;
@@ -176,6 +200,7 @@ p {
 }
 
 .poison-planet {
+  transition: 600ms ease;
   width: 40vw;
   position: absolute;
   /* left: -1vw;
@@ -198,6 +223,7 @@ p {
 }
 
 .destroyed-planet {
+  transition: 600ms ease;
   width: 25vw;
   position: absolute;
   /* left: 30vw;
@@ -312,15 +338,35 @@ p {
 }
 @keyframes targ6 {
   0% {
-    transform: translate(30vw,36vw) rotate(0deg);
+    transform: translate(25vw,36vw) rotate(0deg);
   }
 
   50% {
-    transform: translate(30vw,37vw) rotate(45deg);
+    transform: translate(25vw,37vw) rotate(45deg);
   }
 
   100% {
-    transform: translate(30vw,36vw) rotate(0deg);
+    transform: translate(25vw,36vw) rotate(0deg);
+  }
+}
+
+#octotargetchar {
+  width: 0vw;
+  animation: targ7 4s ease-in-out infinite;
+  display: none;
+}
+
+@keyframes targ7 {
+  0% {
+    transform: translate(50vw,25vw) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(50vw,26vw) rotate(45deg);
+  }
+
+  100% {
+    transform: translate(50vw,25vw) rotate(0deg);
   }
 }
 
@@ -339,7 +385,7 @@ p {
   position: absolute;
   width: -10vw;
   display: none;
-  transform: translate(60vw,27vw)
+  transform: translate(54vw,30vw)
 }
 /* @keyframes octocircleland1 {
   0% {
@@ -364,16 +410,14 @@ p {
 #octo-stripe-land {
   position: absolute;
   z-index: 5;
-  /* animation: octopuslineland1 4s ease-in-out infinite; */
   display: none;
   transform: translate(5vw,34vw)
 }
 #octo-stripe-char {
   position: absolute;
   z-index: 5;
-  /* animation: octopuslineland1 4s ease-in-out infinite; */
   display: none;
-  transform: translate(61vw,28vw)
+  transform: translate(55vw,31vw)
 }
 /* @keyframes octopuslineland1 {
   0% {
@@ -391,13 +435,22 @@ p {
 
 .octopuslineland {
 }
+.octopuslinechar {
+}
 
 .octopuslandimg {
   display: none;
   position: absolute;
   width: 18vw;
-  top: 12vw;
+  top: 23vw;
   left: 5vw;
+}
+.octopuscharimg {
+  display: none;
+  position: absolute;
+  width: 22vw;
+  top: 21vw;
+  left: 68vw;
 }
 
 /* @keyframes starblinking {
