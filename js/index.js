@@ -1,15 +1,15 @@
-// let octopusAlienStripeRise = anime({
-//   targets: '#octo-stripe-land',
-//   targets: '.line-drawing-demo .lines path',
-//   strokeDashoffset: [anime.setDashoffset, 0],
-//   easing: 'easeInOutSine',
-//   duration: 1500,
-// })
-//
-// let targetsPlay01 =
-// document.querySelector('.rectButton')
+
+
+
+
+
+
 
 // ПРИБЛИЗИТЬ ПЛАНЕТУ
+
+
+
+
 
   let tlOcto = anime.timeline({
   autoplay: false
@@ -146,7 +146,12 @@ document.querySelector('#octotarget')
 targetsoctoPlay.onclick = tlOcto.play
 
 
+
+
+
 // ПОСМОТРЕТЬ ПЕЙЗАЖ
+
+
 
 
 
@@ -332,9 +337,7 @@ targetsOctoCharPlay.onclick = tlOctoChar.play
 
 
 
-
 // ВЕРНУТЬСЯ В КОСМОС
-
 
 
 
@@ -546,7 +549,6 @@ backToSpaceFromOcto
 })
 .add({
   targets: '.octopus-planet',
-  // width: ['40vw','15vw'],
   width: '15vw',
   left: ['50vw'],
   top: ['5vw'],
@@ -558,21 +560,18 @@ backToSpaceFromOcto
 
 .add({
   targets: '.insect-planet',
-  // width: ['22vw','28vw'],
   width: '28vw',
   easing: 'easeOutSine',
   duration: 50,
 }, 2700)
 .add({
   targets: '.poison-planet',
-  // width: ['22vw','40vw'],
   width: '40vw',
   easing: 'easeOutSine',
   duration: 50,
 }, 2700)
 .add({
   targets: '.destroyed-planet',
-  // width: ['22vw','25vw'],
   width: '25vw',
   easing: 'easeOutSine',
   duration: 50,

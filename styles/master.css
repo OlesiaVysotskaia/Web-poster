@@ -18,11 +18,7 @@ font-weight: 200;
 font-style: normal;
 }
 
-html {
-  /* overflow-x: hidden; */
-}
 body {
-  /* overflow-x: hidden; */
   background-color: #1B2547;
   width: 1024px;
   height: 745px;
@@ -54,7 +50,6 @@ p {
 
 .planet-text-name {
   position: absolute;
-  /* top: 62vw; */
   bottom: 2vw;
   z-index: 5;
   left: 6vw;
@@ -156,8 +151,6 @@ p {
   transition: 600ms ease;
   width: 28vw;
   position: absolute;
-  /* left: 66vw;
-  top: 29vw; */
   animation: flyingins 4s ease-in-out infinite;
 }
 
@@ -203,8 +196,6 @@ p {
   transition: 600ms ease;
   width: 40vw;
   position: absolute;
-  /* left: -1vw;
-  top: 8vw; */
   animation: flyingpoi 4s ease-in-out infinite;
 }
 
@@ -226,8 +217,6 @@ p {
   transition: 600ms ease;
   width: 25vw;
   position: absolute;
-  /* left: 30vw;
-  top: 45vw; */
   animation: flyingdes 4s ease-in-out infinite;
 }
 
@@ -378,7 +367,7 @@ p {
   width: -10vw;
   display: none;
   transform: translate(32vw,40vw)
-  /* animation: octocircleland1 4s ease-in-out infinite; */
+
 }
 .octocirclechar {
   z-index: 5;
@@ -387,19 +376,7 @@ p {
   display: none;
   transform: translate(54vw,30vw)
 }
-/* @keyframes octocircleland1 {
-  0% {
-    transform: translate(32vw,40vw);
-  }
 
-  50% {
-    transform: translate(32vw,40vw);
-  }
-
-  100% {
-    transform: translate(32vw,40vw);
-  }
-} */
 
 .star {
   width: 1vw;
@@ -417,21 +394,8 @@ p {
   position: absolute;
   z-index: 5;
   display: none;
-  transform: translate(55vw,31vw)
+  transform: translate(53vw,29vw)
 }
-/* @keyframes octopuslineland1 {
-  0% {
-    transform: translate(5vw,34vw);
-  }
-
-  50% {
-    transform: translate(5vw,34vw);
-  }
-
-  100% {
-    transform: translate(5vw,34vw);
-  }
-} */
 
 .octopuslineland {
 }
@@ -452,20 +416,3 @@ p {
   top: 21vw;
   left: 68vw;
 }
-
-/* @keyframes starblinking {
-  0% {
-    transform: scale(1.5);
-    opacity: 1;
-  }
-
-  50% {
-    transform: scale(1);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1.5);
-    opacity: 1;
-  }
-} */
